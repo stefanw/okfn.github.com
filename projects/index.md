@@ -6,13 +6,14 @@ bodyclass: code
 
 # Labs Projects
 
-<ul class="filters hidden">
-  <li data-filter="featured" class="active">Featured</li>
-  <li data-filter="helpwanted">Help wanted</li>
-  <li data-filter="type">Type</li>
-  <li data-filter="tags">Tagged</li>
-  <li data-filter="language">Languages</li>
-</ul>
+<form class="form-inline hidden" id="filters">
+  <button type="button" class="btn btn-primary active" data-filter="featured*=true">Featured</button>
+  <button type="button" class="btn btn-primary" data-filter="helpwanted*=true">Help wanted</button>
+  <div class="btn-group type"></div>
+  <div class="btn-group tags"></div>
+  <div class="btn-group status"></div>
+  <div class="btn-group language"></div>
+</form>
 
 <div class="projects">
   {% for project in site.categories.projects %}
